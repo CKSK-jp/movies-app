@@ -9,11 +9,11 @@ function addEntry(title, rating) {
   let newEntry = $('<tr>');
   newEntry.append(`<td>${title}</td>`);
   newEntry.append(`<td>${rating}</td>`);
-  newEntry.append('<td><button class="removeRowBtn">Remove</button></td>');
+  newEntry.append('<td><button class="rmv-row-btn">Remove</button></td>');
   newEntry.appendTo('tbody')
 }
 
-$('tbody').on('click', '.removeRowBtn', function () {
+$('tbody').on('click', '.rmv-row-btn', function () {
   $(this).closest('tr').remove();
 });
 
@@ -93,4 +93,8 @@ $('body').css({
   'display': 'flex',
   'flex-direction': 'column',
   'align-items': 'center'
+})
+
+$('.table-sortable th').css({
+  'cursor': 'pointer'
 })
