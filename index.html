@@ -12,7 +12,7 @@
   <h1>Movie Ranker</h1>
   <form class="movie-entry">
     <label for="movie-title"> Movie Title:
-      <input type="text" id="movie-title" required>
+      <input type="text" pattern=".{2,}" id="movie-title" required>
     </label>
     <label for="movie-rating"> Rating: 
       <input type="number" id="rating" min="0" max="10" required>
@@ -20,7 +20,7 @@
     <button type="submit">Submit</button>
   </form>
 
-  <table id="movie-table">
+  <table id="movie-table" class="table-sortable">
     <thead id="movie-rankings">
       <tr>
         <th>Movie Title</th>
@@ -29,7 +29,6 @@
       </tr>
     </thead>
     <tbody>
-
     </tbody>
   </table>
 
