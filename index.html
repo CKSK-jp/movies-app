@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Ranker</title>
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+  <h1>Movie Ranker</h1>
+  <form class="movie-entry">
+    <label for="movie-title"> Movie Title:
+      <input type="text" id="movie-title" required>
+    </label>
+    <label for="movie-rating"> Rating: 
+      <input type="number" id="rating" min="0" max="10" required>
+    </label>
+    <button type="submit">Submit</button>
+  </form>
+
+  <table id="movie-table">
+    <thead id="movie-rankings">
+      <tr>
+        <th>Movie Title</th>
+        <th>Rating</th>
+        <th>-</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
