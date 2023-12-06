@@ -9,7 +9,7 @@ function addEntry(title, rating) {
   let newEntry = $('<tr>');
   newEntry.append(`<td>${title}</td>`);
   newEntry.append(`<td>${rating}</td>`);
-  newEntry.append('<td><button class="rmv-row-btn">Remove</button></td>');
+  newEntry.append('<td><button class="rmv-row-btn">X</button></td>');
   newEntry.appendTo('tbody')
 }
 
@@ -32,7 +32,11 @@ function sortTableByColumn(column, asc = true) {
   const sortedRows = rows.sort((a, b) => {
     const aColText = $(a).find('td').eq(column).text().toLowerCase().trim();
     const bColText = $(b).find('td').eq(column).text().toLowerCase().trim();
-    return aColText > bColText ? (1 * dirToggle) : (-1 * dirToggle);
+
+    const aColVal = +aColText;
+    const bColVal = +bColText;
+
+    return aColVal > bColVal ? (1 * dirToggle) : (-1 * dirToggle);
   });
 
   //remove existing rows
